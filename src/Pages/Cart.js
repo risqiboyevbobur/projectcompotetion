@@ -3,7 +3,6 @@ import { Button, Container, Col, Row, Table } from "react-bootstrap";
 import { useCart } from "react-use-cart";
 import { useThemeHook } from "../GlobalComponents/ThemeProvider";
 import { BsCartCheck, BsCartX } from "react-icons/bs";
-import { Link } from "@reach/router";
 
 const Cart = () => {
   const [theme] = useThemeHook();
@@ -51,7 +50,7 @@ const Cart = () => {
                       <div style={{ padding: ".5rem" }}>
                         <img
                           src={item.img}
-                          style={{ width: "4rem" }}
+                          style={{ width: "10rem" }}
                           alt={item.title}
                         />
                       </div>
@@ -95,15 +94,6 @@ const Cart = () => {
                     >
                       Delete item
                     </Button>
-                    <Link to="/">
-                      <Button
-                        variant="success"
-                        onClick={() => removeItem(item.id)}
-                        className="ms-2"
-                      >
-                        Edit item
-                      </Button>
-                    </Link>
                   </td>
                 </tr>
               );
